@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="글로모여" />
+    <meta name="keywords" content="글로모여" />
+    <meta name="description" content="대구 글쓰기, 독서 모임 한 눈에 둘러보기" />
+
+    <!-- webpack setting -->
+    <meta http-equiv="“Pragma”" content="”no-cache”" />
+    <meta http-equiv="“Expires”" content="”-1″" />
+    <meta http-equiv="“CACHE-CONTROL”" content="”NO-CACHE”" />
+
+    <!-- sns share -->
+    <meta property="og:url" content="https://writemore-f6e18.web.app/" />
+    <meta property="og:title" content="글로모여" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/images/landingimage2.png" />
+    <meta property="og:description" content="대구 글쓰기, 독서 모임 한 눈에 둘러보기" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon-precomposed" href="./assets/images/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>글로모여</title>
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+
+    <style>
+      @font-face {
+        font-family: 'JejuMyoungjo';
+        src: url('./assets/fonts/JejuMyeongjo.ttf');
+      }
+
+      @media (max-width: 1140px) {
+        body {
+          margin: 0 1rem;
+        }
+      }
+
+      @media (min-width: 1140px) {
+        body {
+          margin: 0 10%;
+        }
+
+        .header {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 1600px) {
+        body {
+          margin: 0 15%;
+        }
+      }
+
+      @media (min-width: 1920px) {
+        body {
+          margin: 0 20%;
+        }
+      }
+
+      .introduceBox {
+        display: flex;
+        justify-content: center;
+      }
+
+      .introduceImg {
+        width: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-links">
+        <a href="./introduce.html" class="link">글로모여 소개</a>
+        <!-- <a href="" class="link">후기</a> -->
+        <!-- <a href="./login.html" class="link">로그인</a> -->
+        <a class="link" id="menuClose">뒤로가기</a>
+      </div>
+    </nav>
+    <header>
+      <div class="header-nav">
+        <div class="header-left">
+          <img
+            src="./assets/images/logo.png"
+            width="180px"
+            class="logo"
+            onclick="location.href='./main.html'"
+          />
+          <a>글로모여 소개</a>
+          <!-- <a>모임 등록하기</a> -->
+          <!-- <a>후기</a> -->
+        </div>
+        <div class="header-right">
+          <!-- <a class="login" href="./login.html">로그인</a> -->
+          <img src="./assets/images/free-icon-menu-1828859.png" width="20px" class="menu-icon" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="introduceBox">
+        <img src="./assets/images/introduce.png" class="introduceImg" />
+      </div>
+    </main>
+  </body>
+  <script src="./js/sidemenu.js"></script>
+</html>

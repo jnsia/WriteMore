@@ -1,0 +1,31 @@
+{
+  "name": "glomoyo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": ".",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "product": "webpack --mode=production"
+  },
+  "author": "writemore",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.4.0",
+    "firebase-cli": "^1.2.0",
+    "firebase-tools": "^11.25.2",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
+    "process": "^0.11.10"
+  }
+}
