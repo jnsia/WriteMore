@@ -4,7 +4,7 @@ const groupIntro = document.querySelector('.g-intro');
 const groupAddress = document.querySelector('.g-address');
 
 const groupPurpose = document.querySelector('#g-purpose');
-const groupGanre = document.querySelector('#g-ganre');
+const groupGanre = document.querySelector('#g-genre');
 const groupMood = document.querySelector('#g-mood');
 const groupContent = document.querySelector('#g-content');
 const groupTarget = document.querySelector('.g-target');
@@ -22,7 +22,7 @@ const endTime = document.querySelector('#end-time');
 
 const receiveGroupInfo = JSON.parse(localStorage.getItem('targetGroupInfo'));
 
-if (receiveGroupInfo.groupImage == undefined) {
+if (receiveGroupInfo?.groupImage == undefined) {
   groupImg.src = './assets/images/groupImages/group_test5.jpg';
 } else {
   groupImg.src = receiveGroupInfo.groupImage;
@@ -31,7 +31,7 @@ if (receiveGroupInfo.groupImage == undefined) {
 groupTitle.innerHTML = receiveGroupInfo.title;
 groupIntro.innerHTML = receiveGroupInfo.intro;
 groupPurpose.innerHTML = '#' + receiveGroupInfo.purpose;
-groupGanre.innerHTML = '#' + receiveGroupInfo.genre;
+groupGanre.innerHTML = '#' + receiveGroupInfo.ganre;
 groupMood.innerHTML = '#' + receiveGroupInfo.mood;
 groupContent.innerHTML = receiveGroupInfo.content;
 groupCost.innerHTML = receiveGroupInfo.cost;
@@ -71,7 +71,7 @@ if (receiveGroupInfo.hostNmae == undefined) {
   hostName.innerHTML = receiveGroupInfo.hostNmae + ' >';
 }
 
-if (receiveGroupInfo.hostName == undefined) {
+if (receiveGroupInfo.hostName == undefined || receiveGroupInfo.hostName == null) {
   hostPage.innerHTML = '준비 중입니다.';
   hostPage.style.display = 'flex';
   hostPage.style.justifyContent = 'center';

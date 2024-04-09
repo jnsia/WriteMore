@@ -213,6 +213,7 @@ async function groupClassSearch(option) {
       break;
 
     case '독서':
+      
       targetSnap.forEach((doc) => {
         locationGroup.push(doc.data());
       });
@@ -341,39 +342,39 @@ for (let i = 0; i < groupCard.length; i++) {
 
     targetSnap.forEach((doc) => {
       localStorage.setItem('targetGroupInfo', JSON.stringify(doc.data()));
-      document.location.href = './detail1.html';
+      document.location.href = './detail.html';
     });
   });
 }
 
 // feedback
 
-// import { database } from './firebase';
-// import { ref, set } from 'firebase/database';
+import { database } from './firebase';
+import { ref, set } from 'firebase/database';
 
-// const feedback = document.querySelector('#feedback');
-// const submitBtn = document.querySelector('#submitFeedback');
+const feedback = document.querySelector('#feedback');
+const submitBtn = document.querySelector('#submitFeedback');
 
-// submitBtn.addEventListener('click', () => {
-//   const now = new Date();
+submitBtn.addEventListener('click', () => {
+  const now = new Date();
 
-//   const feedbackText = JSON.stringify(feedback.value);
+  const feedbackText = JSON.stringify(feedback.value);
 
-//   if (feedback.value != '') {
-//     try {
-//       storeFeedback(now, feedbackText);
-//     } catch (error) {
-//       console.error(error);
-//     }
+  if (feedback.value != '') {
+    try {
+      storeFeedback(now, feedbackText);
+      alert('소중한 의견 감사합니다!');
+    } catch (error) {
+      console.error(error);
+    }
 
-//     feedback.value = '';
-//     alert('소중한 의견 감사합니다!');
-//   }
-// });
+    feedback.value = '';
+  }
+});
 
-// function storeFeedback(now, data) {
-//   set(ref(database, 'feedback/' + now), {
-//     time: now,
-//     feedback: data,
-//   });
-// }
+function storeFeedback(now, data) {
+  set(ref(database, 'feedback/' + now), {
+    time: now,
+    feedback: data,
+  });
+}

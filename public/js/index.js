@@ -5,4 +5,3 @@ import './category';
 import './main';
 import './detail';
 import './sidemenu';
-import './calendar';
